@@ -22,6 +22,8 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import Home from './src/pages';
 
+// theme color reference
+// https://ant.design/docs/spec/colors-cn
 const theme = {
   red: '#ff4d4f',
   blue: 'blue',
