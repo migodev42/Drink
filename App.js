@@ -8,10 +8,13 @@
 
 /* react-navigation deps */
 import 'react-native-gesture-handler';
-import { NavigationContainer } from '@react-navigation/native';
+import {NavigationContainer} from '@react-navigation/native';
 
-import React from 'react';
-import { SafeAreaView, StyleSheet, ScrollView, View, Text, StatusBar } from 'react-native';
+/* 启动页 */
+import SplashScreen from 'react-native-splash-screen';
+
+import React, {useEffect} from 'react';
+import {SafeAreaView, StyleSheet, ScrollView, View, Text, StatusBar} from 'react-native';
 
 import {
   Header,
@@ -29,6 +32,10 @@ const theme = {
   blue: 'blue',
 };
 const App = () => {
+  useEffect(() => {
+    SplashScreen.hide();
+  }, []);
+
   return (
     <NavigationContainer>
       <StatusBar barStyle="default" backgroundColor={theme.red} />
