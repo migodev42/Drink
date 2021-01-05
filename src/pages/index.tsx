@@ -1,24 +1,17 @@
 import * as React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
+import { SafeAreaView, StyleSheet, ScrollView, View, Text, StatusBar } from 'react-native';
 import type { ParamListBase } from '@react-navigation/native';
 import type { StackScreenProps } from '@react-navigation/stack';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 
 function Settings() {
-  return <Text>Settings</Text>
+  return <Text>Settings</Text>;
 }
 function History() {
-  return <Text>History</Text>
+  return <Text>History</Text>;
 }
 function Home() {
-  return <Text>Home</Text>
+  return <Text>Home</Text>;
 }
 
 type MaterialTopTabParams = {
@@ -29,13 +22,12 @@ type MaterialTopTabParams = {
 
 const Tab = createMaterialTopTabNavigator<MaterialTopTabParams>();
 
-export default function MaterialTopTabsScreen({
-  navigation,
-}: StackScreenProps<ParamListBase>) {
+export default function MaterialTopTabsScreen({ navigation }: StackScreenProps<ParamListBase>) {
   React.useLayoutEffect(() => {
-    navigation && navigation.setOptions({
-      cardStyle: { flex: 1 },
-    });
+    navigation &&
+      navigation.setOptions({
+        cardStyle: { flex: 1 },
+      });
   }, [navigation]);
 
   return (
@@ -44,29 +36,27 @@ export default function MaterialTopTabsScreen({
         // activeTintColor: '#e91e63',
         activeTintColor: 'white',
         indicatorStyle: styles.indicatorStyle,
-        labelStyle: { fontSize: 12, width: '100%'}, //https://stackoverflow.com/questions/53420564/react-navigation-header-title-cut-off
+        labelStyle: { fontSize: 12, width: '100%', textTransform: 'none' }, //https://stackoverflow.com/questions/53420564/react-navigation-header-title-cut-off
         style: { backgroundColor: '#ff4d4f' },
-      }}
-    >
+      }}>
       <Tab.Screen
         name="home"
         component={Home}
-        // options={{ title: <Text>HOME</Text>}}
+        options={{ title: 'Home'}}
       />
       <Tab.Screen
         name="history"
         component={History}
-      // options={{ title: 'Histroy' }}
+        options={{ title: 'Histroy' }}
       />
       <Tab.Screen
         name="settings"
         component={Settings}
-      // options={{ title: 'Settings' }}
+        options={{ title: 'Settings' }}
       />
     </Tab.Navigator>
   );
 }
-
 
 const styles = StyleSheet.create({
   indicatorStyle: {
