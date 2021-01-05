@@ -10,7 +10,7 @@
   - https://github.com/crazycodeboy/react-native-splash-screen
   - https://github.com/crazycodeboy/react-native-splash-screen/issues/241（spalash和layout页跳动问题）
 - [ ] Router代码整理
-
+- [x] Tab 文字取消默认大写 https://github.com/react-navigation/react-navigation/issues/814
 - [ ] Home
   - [ ] 喝水主功能
   - [ ] 切换杯子大小
