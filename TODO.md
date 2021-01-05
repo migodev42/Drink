@@ -6,6 +6,9 @@
   - [Use android studio to create app icon](https://developer.android.com/studio/write/image-asset-studio#access)
 - [x] [App name change](https://stackoverflow.com/questions/34794679/change-app-name-in-react-native#answer-62448556)
 - [ ] App launch page 启动页
+  - [x] Android
+  - https://github.com/crazycodeboy/react-native-splash-screen
+  - https://github.com/crazycodeboy/react-native-splash-screen/issues/241（spalash和layout页跳动问题）
 - [ ] Router代码整理
 
 - [ ] Home
