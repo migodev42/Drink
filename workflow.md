@@ -1,0 +1,6 @@
+- android studio
+  - android-emulator
+  - adb reverse(for react-devtools)
+- react-devtools
+- yarn start
+- yarn android
