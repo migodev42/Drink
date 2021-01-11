@@ -1,5 +1,5 @@
 ### 功能规划
-- [ ] App Icon setup
+- [ ] App logo Icon setup
   - [x] android icon
   - [ ] ios icon
   - [Guide on medium blog](https://medium.com/better-programming/react-native-add-app-icons-and-launch-screens-onto-ios-and-android-apps-3bfbc20b7d4c)
@@ -18,5 +18,18 @@
 - [ ]  History 数据统计
 - [ ] Settings
   - [ ] 主题切换
+- [ ] icons in project
+  - [x] android
+  icon style: https://stackoverflow.com/questions/34624100/simulate-display-inline-in-react-native
+  icons: https://oblador.github.io/react-native-vector-icons/
+  install: https://github.com/oblador/react-native-vector-icons
+  - [ ] ios
+- react devtools
+``` bash
+# https://www.npmjs.com/package/react-devtools
+yarn add --dev react-devtools
 
 
+react-devtools
+```
+- [ ] 数据持久化  react-native-async-storege
