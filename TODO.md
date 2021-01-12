@@ -34,3 +34,15 @@ react-devtools
 ```
 - [ ] 数据持久化  react-native-async-storege
 
+- UIKit
+  - galio
+### 组件
+
+- [x] [semi progress bar](https://github.com/pajicf/react-native-semi-circle-progress)
+  - [参考](https://morioh.com/p/9810be313a3d)
+  - [ ] hooks重构
+
+
+### 工程化
+- [x] eslint-react-hooks
+- [x] import alias

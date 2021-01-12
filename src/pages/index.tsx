@@ -5,6 +5,9 @@ import type { StackScreenProps } from '@react-navigation/stack';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import SemiCircleProgress from '@components/semi-progress';
+
+
 
 function Settings() {
   return <Text></Text>;
@@ -17,14 +20,31 @@ function Home() {
   const onPress = () => {
     setCurrent(prev => prev + 350)
   }
+  const percent = React.useMemo(() => {
+    const rs: number = ((current / 2650) * 100)
+    return rs > 100 ? 100 : parseFloat(rs.toFixed(1));
+  }, [current])
+
   return <View style={{ padding: 20 }}>
     <Text>Target: {2650}</Text>
     <Text>Current: {current}</Text>
+
+
+    <View style={{ alignItems: 'center' }}>
+      <SemiCircleProgress
+        percentage={percent}
+        progressColor={"#ff4d4f"}
+        interiorCircleStyle={{ alignItems: 'center' }}
+      >
+        <Text style={{ fontSize: 12, color: "#ff4d4f" }}>{percent}%</Text>
+      </SemiCircleProgress>
+    </View>
+
     <View >
       {/* style={{ width: '100%', flexDirection: 'row', justifyContent: 'center' }} */}
       <Button title="add" onPress={onPress} color="#ff4d4f" />
     </View>
-  </View>;
+  </View >;
 }
 
 type MaterialTopTabParams = {
